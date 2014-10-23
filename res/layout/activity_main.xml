@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/logo"
+    tools:context="com.dabaeen.whosattheoffice.MainActivity" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Who&apos;s At The Office?"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:id="@+id/lSamer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1"
+        android:alpha="0.3"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tSamer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Samer"
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:textSize="26sp" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="right"
+            android:scaleType="fitXY"
+            android:src="@drawable/samer" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lZaid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1"
+        android:alpha="0.3"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tZaid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:text="Zaid"
+            android:textColor="#000000"
+            android:textSize="26sp" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/zaid" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lOmar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1"
+        android:alpha="0.3"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tOmar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:text="Omar"
+            android:textColor="#000000"
+            android:textSize="26sp" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/omar" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Privacy"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:text="Privacy Policy" />
+
+</LinearLayout>
