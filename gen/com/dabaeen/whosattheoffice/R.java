@@ -411,12 +411,13 @@ containing a value of this type.
         public static final int zaid=0x7f020022;
     }
     public static final class id {
-        public static final int action_settings=0x7f08001b;
         public static final int book_now=0x7f080010;
         public static final int buyButton=0x7f08000a;
         public static final int buy_now=0x7f08000f;
         public static final int buy_with_google=0x7f08000e;
         public static final int classic=0x7f080011;
+        public static final int enable_notifications=0x7f08001c;
+        public static final int enable_sound=0x7f08001d;
         public static final int grayscale=0x7f080012;
         public static final int holo_dark=0x7f080005;
         public static final int holo_light=0x7f080006;
@@ -426,6 +427,7 @@ containing a value of this type.
         public static final int lZaid=0x7f080017;
         public static final int layout=0x7f080014;
         public static final int match_parent=0x7f08000c;
+        public static final int misc_settings=0x7f08001b;
         public static final int monochrome=0x7f080013;
         public static final int none=0x7f080000;
         public static final int normal=0x7f080001;

@@ -1,6 +1,6 @@
 <?php
 
-$con=mysqli_connect("mysql.serversfree.com", "**", "***", "*****");
+$con=mysqli_connect("mysql.serversfree.com", "u564549822_off", "***", "****");
 // Check connection
 if (mysqli_connect_errno()) {
 	echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -10,6 +10,7 @@ $user = getVariable("user");
 $status = getVariable("status");
 $action = getVariable("action");
 $dev_tok = getVariable("dev_tok");
+$msg = getVariable("msg");
 
 if($action == "get"){
 	
@@ -26,6 +27,16 @@ if($action == "get"){
 	mysqli_query($con, "UPDATE `states` SET `dev_tok`='$dev_tok' WHERE `user`='$user'");
 
 	echo "success";
+
+} else if($action=="announce") {
+
+	$regRes = mysqli_query($con,"SELECT `dev_tok` FROM `states`");
+	$myRegArr = array();
+	while($row = mysqli_fetch_array($regRes)) {
+		$myRegArr[] = $row['dev_tok'];
+	}
+	sendNotification($myRegArr, $msg, "");
+	echo "Success";
 
 } else if($user){
 
@@ -60,7 +71,7 @@ function getVariable($var){
 
 function sendNotification($regId, $message, $user){
 	// Replace with the real server API key from Google APIs
-	$apiKey = "MYAPIKEY";
+	$apiKey = "AIzaSyBPpJZL_NazwCJEJrS5Fnnvl7T1dCEq3LA";
 
 	// Replace with the real client registration IDs
 	// $registrationIDs = array( "reg id1","reg id2");

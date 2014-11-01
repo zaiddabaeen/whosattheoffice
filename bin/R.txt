@@ -94,12 +94,13 @@ int drawable powered_by_google_dark 0x7f02001f
 int drawable powered_by_google_light 0x7f020020
 int drawable samer 0x7f020021
 int drawable zaid 0x7f020022
-int id action_settings 0x7f08001b
 int id book_now 0x7f080010
 int id buyButton 0x7f08000a
 int id buy_now 0x7f08000f
 int id buy_with_google 0x7f08000e
 int id classic 0x7f080011
+int id enable_notifications 0x7f08001c
+int id enable_sound 0x7f08001d
 int id grayscale 0x7f080012
 int id holo_dark 0x7f080005
 int id holo_light 0x7f080006
@@ -109,6 +110,7 @@ int id lSamer 0x7f080015
 int id lZaid 0x7f080017
 int id layout 0x7f080014
 int id match_parent 0x7f08000c
+int id misc_settings 0x7f08001b
 int id monochrome 0x7f080013
 int id none 0x7f080000
 int id normal 0x7f080001
