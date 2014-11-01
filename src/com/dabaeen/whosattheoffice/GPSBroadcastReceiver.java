@@ -25,7 +25,7 @@ public class GPSBroadcastReceiver extends BroadcastReceiver {
 			LocationManager manager = (LocationManager)context.getSystemService(Context.LOCATION_SERVICE);
 			
 			long minTime = 5*60*1000;     // Milliseconds
-			float minDistance = 100*1; // Meters
+			float minDistance = 50*1; // Meters
 
 			PendingIntent launchIntent = PendingIntent.getBroadcast(context, 787, intent2, PendingIntent.FLAG_CANCEL_CURRENT);
 			if(gps.isNetworkEnabled)

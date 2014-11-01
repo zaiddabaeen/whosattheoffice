@@ -7,6 +7,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.DownloadManager;
 import android.app.DownloadManager.Query;
 import android.app.DownloadManager.Request;
@@ -26,12 +27,16 @@ import android.os.Environment;
 import android.os.Handler;
 import android.provider.Settings;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.dabaeen.whosattheoffice.Communicator.ResponseListener;
+import com.dabaeen.whosattheoffice.gcm.PlayServices;
+import com.google.android.gms.plus.model.people.Person.PlacesLived;
 
 public class MainActivity extends Activity {
 
@@ -40,7 +45,7 @@ public class MainActivity extends Activity {
 	public enum Users{SAMER,OMAR,ZAID};
 
 	public String ME = null;
-	public final static String initMe = "omar";
+	public final static String initMe = "samer";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +70,16 @@ public class MainActivity extends Activity {
 		startTracking();
 
 		MediaPlayer.create(this, R.raw.believe).start();
+		
+		SharedPreferences prefs = getSharedPrefs();
+		int current_version = PlayServices.getAppVersion(this);
+		if(prefs.getInt("version", 0) != current_version){
+			prefs.edit().putInt("version", current_version).commit();
+			new AlertDialog.Builder(this)
+			.setTitle("What's new?")
+			.setMessage("- Can disable notifications\n- Can disable notification sound\n- Announcement notifications\n- Decreased diameter by half")
+			.show();
+		}
 
 	}
 
@@ -88,10 +103,14 @@ public class MainActivity extends Activity {
 
 		super.onStop();
 	}
+	
+	private SharedPreferences getSharedPrefs(){
+		return getSharedPreferences("default", MODE_PRIVATE);
+	}
 
 	private String whoAmI(){
 
-		SharedPreferences prefs = getSharedPreferences("default", MODE_PRIVATE);
+		SharedPreferences prefs = getSharedPrefs();
 
 		if (prefs.getString("user", null) == null){
 
@@ -111,7 +130,7 @@ public class MainActivity extends Activity {
 		LocationManager manager = (LocationManager)this.getSystemService(Context.LOCATION_SERVICE);
 
 		long minTime = 5*60*1000;     // Milliseconds
-		float minDistance = 100*1; // Meters
+		float minDistance = 50*1; // Meters
 
 		PendingIntent launchIntent = PendingIntent.getBroadcast(this, 787, intent2, PendingIntent.FLAG_CANCEL_CURRENT);
 		if(gps.isNetworkEnabled)
@@ -125,24 +144,28 @@ public class MainActivity extends Activity {
 		}
 	}
 
-	/*@Override
+	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
-		if (id == R.id.action_settings) {
+		switch(id){
+		case R.id.enable_notifications:
+			item.setChecked(!item.isChecked());
+			getSharedPrefs().edit().putBoolean("notifications", item.isChecked()).commit();
+			return true;
+		case R.id.enable_sound:
+			item.setChecked(!item.isChecked());
+			getSharedPrefs().edit().putBoolean("sound", item.isChecked()).commit();
 			return true;
 		}
+		
 		return super.onOptionsItemSelected(item);
-	}*/
+	}
 
 	private void setUserStatus(Enum user, boolean status){
 

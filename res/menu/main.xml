@@ -2,10 +2,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.dabaeen.whosattheoffice.MainActivity" >
 
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/action_settings"/>
+    <group android:id="@+id/misc_settings" >
+        <item
+            android:id="@+id/enable_notifications"
+            android:checkable="true"
+            android:checked="true"
+            android:title="Enable Notifications">
+        </item>
+        <item
+            android:id="@+id/enable_sound"
+            android:checkable="true"
+            android:checked="true"
+            android:title="Enable Sound">
+        </item>
+    </group>
 
 </menu>
