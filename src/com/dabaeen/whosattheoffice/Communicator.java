@@ -33,8 +33,8 @@ import com.dabaeen.whosattheoffice.gcm.PlayServices;
 
 public class Communicator {
 
-	private final static String SERVER_ADDRESS = "http://phpcattest.bugs3.com/office.php";
-	private final static String UpdateURL = "http://phpcattest.bugs3.com/office_update.txt";
+	private final static String SERVER_ADDRESS = "http://yourserver.bugs3.com/office.php";
+	private final static String UpdateURL = "http://yourserver.bugs3.com/office_update.txt";
 
 	public String ME = null;
 	private Context context;
