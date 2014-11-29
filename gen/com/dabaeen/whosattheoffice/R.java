@@ -370,8 +370,8 @@ containing a value of this type.
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
          */
-        public static final int activity_horizontal_margin=0x7f0a0000;
-        public static final int activity_vertical_margin=0x7f0a0001;
+        public static final int activity_horizontal_margin=0x7f090000;
+        public static final int activity_vertical_margin=0x7f090001;
     }
     public static final class drawable {
         public static final int common_signin_btn_icon_dark=0x7f020000;
@@ -411,45 +411,45 @@ containing a value of this type.
         public static final int zaid=0x7f020022;
     }
     public static final class id {
-        public static final int book_now=0x7f080010;
-        public static final int buyButton=0x7f08000a;
-        public static final int buy_now=0x7f08000f;
-        public static final int buy_with_google=0x7f08000e;
-        public static final int classic=0x7f080011;
-        public static final int enable_notifications=0x7f08001c;
-        public static final int enable_sound=0x7f08001d;
-        public static final int grayscale=0x7f080012;
-        public static final int holo_dark=0x7f080005;
-        public static final int holo_light=0x7f080006;
-        public static final int hybrid=0x7f080004;
-        public static final int lOmar=0x7f080019;
-        public static final int lSamer=0x7f080015;
-        public static final int lZaid=0x7f080017;
-        public static final int layout=0x7f080014;
-        public static final int match_parent=0x7f08000c;
-        public static final int misc_settings=0x7f08001b;
-        public static final int monochrome=0x7f080013;
-        public static final int none=0x7f080000;
-        public static final int normal=0x7f080001;
-        public static final int production=0x7f080007;
-        public static final int sandbox=0x7f080008;
-        public static final int satellite=0x7f080002;
-        public static final int selectionDetails=0x7f08000b;
-        public static final int strict_sandbox=0x7f080009;
-        public static final int tOmar=0x7f08001a;
-        public static final int tSamer=0x7f080016;
-        public static final int tZaid=0x7f080018;
-        public static final int terrain=0x7f080003;
-        public static final int wrap_content=0x7f08000d;
+        public static final int book_now=0x7f0b000e;
+        public static final int buyButton=0x7f0b000a;
+        public static final int buy_now=0x7f0b000f;
+        public static final int buy_with_google=0x7f0b0010;
+        public static final int classic=0x7f0b0011;
+        public static final int enable_notifications=0x7f0b001c;
+        public static final int enable_sound=0x7f0b001d;
+        public static final int grayscale=0x7f0b0012;
+        public static final int holo_dark=0x7f0b0005;
+        public static final int holo_light=0x7f0b0006;
+        public static final int hybrid=0x7f0b0000;
+        public static final int lOmar=0x7f0b0019;
+        public static final int lSamer=0x7f0b0015;
+        public static final int lZaid=0x7f0b0017;
+        public static final int layout=0x7f0b0014;
+        public static final int match_parent=0x7f0b000c;
+        public static final int misc_settings=0x7f0b001b;
+        public static final int monochrome=0x7f0b0013;
+        public static final int none=0x7f0b0001;
+        public static final int normal=0x7f0b0002;
+        public static final int production=0x7f0b0007;
+        public static final int sandbox=0x7f0b0008;
+        public static final int satellite=0x7f0b0003;
+        public static final int selectionDetails=0x7f0b000b;
+        public static final int strict_sandbox=0x7f0b0009;
+        public static final int tOmar=0x7f0b001a;
+        public static final int tSamer=0x7f0b0016;
+        public static final int tZaid=0x7f0b0018;
+        public static final int terrain=0x7f0b0004;
+        public static final int wrap_content=0x7f0b000d;
     }
     public static final class integer {
-        public static final int google_play_services_version=0x7f090000;
+        public static final int google_play_services_version=0x7f080000;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
     }
     public static final class menu {
-        public static final int main=0x7f0b0000;
+        public static final int main=0x7f0a0000;
     }
     public static final class raw {
         public static final int believe=0x7f040000;
