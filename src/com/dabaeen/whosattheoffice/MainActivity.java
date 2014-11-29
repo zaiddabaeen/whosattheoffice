@@ -194,7 +194,7 @@ public class MainActivity extends Activity {
 
 			dm = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
 			Request request = new Request(
-					Uri.parse("http://phpcattest.bugs3.com/office_update.apk"));
+					Uri.parse("http://yourserver.bugs3.com/office_update.apk"));
 			request.setDestinationUri(Uri.fromFile(new File(
 					Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "office_update.apk")));
 			enqueue = dm.enqueue(request);
